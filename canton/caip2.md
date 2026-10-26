@@ -50,13 +50,16 @@ See reference below for exact `domainId` values.
 
 ### Other synchronizers
 
-Aliases for dedicated synchronizers **MAY** be proposed and **SHOULD** be prefixed with the corresponding network:
+Aliases for dedicated synchronizers **SHOULD** be prefixed with the corresponding network:
 
 ```
 canton:{mainnet|testnet|devnet}-dedicated-name
 ```
 
 The complete network identifier, prefix and dedicated name together, **MUST** satisfy the CAIP-2 reference production `[-_a-zA-Z0-9]{1,32}`, leaving a limited number of characters for the `{dedicated-name}`.
+
+No registry currently maps these aliases to Synchronizer identifiers.
+Discovery and alignment on dedicated-synchronizer aliases between producers and consumers is out of scope of this specification and remains a TBD, ad-hoc arrangement.
 
 This approach provides human-readable, interoperable identifiers while decoupling the CAIP representation from Canton's internal identifier format and remaining compatible with future network evolution.
 
